@@ -1,0 +1,17 @@
+{
+  "name": "griflex",
+  "description": "Minimal Bootstrap",
+  "main": "index.js",
+  "authors": [
+    "Ömer Kala"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/griflex/griflex",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
