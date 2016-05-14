@@ -1,6 +1,6 @@
 {
   "name": "griflex",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,9 +15,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1"
   },
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/kalaomer/griflex.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kalaomer/griflex.git"
   }
 }
