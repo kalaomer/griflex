@@ -6,7 +6,7 @@
     "Ömer Kala"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/griflex/griflex",
+  "homepage": "https://github.com/kalaomer/griflex",
   "ignore": [
     "**/.*",
     "node_modules",
