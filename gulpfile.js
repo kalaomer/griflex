@@ -7,7 +7,7 @@ var autoprefixerSettings = require('./gulp/autoprefixer');
 var autoprefixer = require('gulp-autoprefixer')(autoprefixerSettings);
 
 gulp.task('sass', function () {
-  return gulp.src('./scss/griflex.scss')
+  return gulp.src('./scss/griflex*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer)
     .pipe(gulp.dest('./dist/css'))
