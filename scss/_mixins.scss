@@ -1,7 +1,19 @@
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
 
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    box-shadow: $shadow;
+  }
+}
+
+// Utilities
 @import "mixins/breakpoints";
 @import "mixins/hover";
 @import "mixins/tab-focus";
 @import "mixins/grid";
 @import "mixins/grid-framework";
 @import "mixins/clearfix";
+@import "mixins/lists";
+@import "mixins/border-radius";
