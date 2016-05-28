@@ -16,15 +16,21 @@
     @for $i from 1 through $columns {
       $percentage: $i / $columns;
 
-      .col-#{$breakpoint}-#{$i} {
+      %col-#{$breakpoint}-#{$i} {
         @extend %base-column;
 
         @include make-col-breakpoint($percentage, $breakpoint, $breakpoints);
       }
+
+      @if $enable-grid-columns {
+        .col-#{$breakpoint}-#{$i} {
+          @extend %col-#{$breakpoint}-#{$i};
+        }
+      }
     }
 
     @if $enable-flex {
-      .col-#{$breakpoint} {
+      %col-#{$breakpoint} {
         @extend %base-column;
 
         @include media-breakpoint-up($breakpoint, $breakpoints) {
@@ -32,13 +38,25 @@
           flex-grow: 1;
         }
       }
+
+      @if $enable-grid-columns {
+        .col-#{$breakpoint} {
+          @extend %col-#{$breakpoint};
+        }
+      }
     }
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       @each $modifier in (pull, push) {
         @for $i from 0 through $columns {
-          .#{$modifier}-#{$breakpoint}-#{$i} {
-            @include make-col-modifier($modifier, $i, $columns)
+          %#{$modifier}-#{$breakpoint}-#{$i} {
+            @include make-col-modifier($modifier, $i, $columns);
+          }
+
+          @if $enable-grid-columns {
+            .#{$modifier}-#{$breakpoint}-#{$i} {
+              @extend %#{$modifier}-#{$breakpoint}-#{$i};
+            }
           }
         }
       }
@@ -46,8 +64,14 @@
       // `$columns - 1` because offsetting by the width of an entire row isn't possible
       @for $i from 0 through ($columns - 1) {
         @if $breakpoint-counter != 1 or $i != 0 { // Avoid emitting useless .offset-xs-0
-          .offset-#{$breakpoint}-#{$i} {
+          %offset-#{$breakpoint}-#{$i} {
             @include make-col-modifier(offset, $i, $columns)
+          }
+
+          @if $enable-grid-columns {
+            .offset-#{$breakpoint}-#{$i} {
+              @extend %offset-#{$breakpoint}-#{$i};
+            }
           }
         }
       }

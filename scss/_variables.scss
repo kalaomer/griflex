@@ -44,8 +44,12 @@ $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        false !default;
 $enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
 $enable-print-styles:       true !default;
+
+$enable-grid-classes:       true !default;
+$enable-grid-row:           $enable-grid-classes !default;
+$enable-grid-containers:    $enable-grid-classes !default;
+$enable-grid-columns:       $enable-grid-classes !default;
 
 
 // Spacing

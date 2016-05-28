@@ -2,9 +2,13 @@
 //
 // Set the container width, and override it for fixed navbars in media queries.
 
-@if $enable-grid-classes {
+%container {
+  @include make-container();
+}
+
+@if $enable-grid-containers {
   .container {
-    @include make-container();
+    @extend %container;
   }
 }
 
@@ -13,9 +17,13 @@
 // Utilizes the mixin meant for fixed width containers, but without any defined
 // width for fluid, full width layouts.
 
-@if $enable-grid-classes {
+%container-fluid {
+  @include make-container-fluid();
+}
+
+@if $enable-grid-containers {
   .container-fluid {
-    @include make-container-fluid();
+    @extend %container-fluid;
   }
 }
 
@@ -23,9 +31,13 @@
 //
 // Rows contain and clear the floats of your columns.
 
-@if $enable-grid-classes {
+%row {
+  @include make-row();
+}
+
+@if $enable-grid-row {
   .row {
-    @include make-row();
+    @extend %row;
   }
 }
 
@@ -33,6 +45,4 @@
 //
 // Common styles for small and large grid columns
 
-@if $enable-grid-classes {
-  @include make-grid-columns();
-}
+@include make-grid-columns();
