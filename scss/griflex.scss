@@ -1,17 +1,17 @@
 
 // Core variables and mixins
-@import "variables";
-@import "mixins";
+@import "griflex/variables";
+@import "griflex/mixins";
 
 // Reset and dependencies
-@import "normalize";
-@import "print";
+@import "griflex/normalize";
+@import "griflex/print";
 
 // Core CSS
-@import "grid";
-@import "reboot";
-@import "type";
-@import "code";
+@import "griflex/grid";
+@import "griflex/reboot";
+@import "griflex/type";
+@import "griflex/code";
 
 // Utility classes
-@import "utilities";
+@import "griflex/utilities";
