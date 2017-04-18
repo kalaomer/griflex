@@ -39,12 +39,14 @@ $brand-danger:              #d9534f !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-flex:               true !default;
+$enable-flex-columns:       true !default;
 $enable-rounded:            true !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        false !default;
 $enable-hover-media-query:  false !default;
 $enable-print-styles:       true !default;
+$enable-visibility-styles:  true !default;
 
 $enable-grid-classes:       true !default;
 $enable-grid-row:           $enable-grid-classes !default;
