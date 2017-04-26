@@ -39,8 +39,8 @@
 }
 
 @mixin make-col($breakpoint, $percentage, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
-  @include make-base-col();
-  @include make-col-breakpoint();
+  @include make-base-col($gutter);
+  @include make-col-breakpoint($percentage, $breakpoint, $breakpoints);
 }
 
 @mixin make-base-col($gutter: $grid-gutter-width) {
