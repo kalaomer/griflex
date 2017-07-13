@@ -1,5 +1,15 @@
 
-// Disable grid class outputs.
+// Disable class outputs.
 $enable-grid-classes: false;
+$enable-flex-columns: false;
+$enable-visibility-styles: false;
 
-@import "../griflex";
+// Core variables and mixins
+@import "./variables";
+@import "./mixins";
+
+// Core CSS
+@import "./grid";
+
+// Utility classes
+@import "./utilities";
